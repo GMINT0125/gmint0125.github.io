@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jimin Kim (김지민) — machine unlearning in generative models</title>
+<meta name="description" content="Jimin Kim (김지민) — M.S. student in Artificial Intelligence at Sungkyunkwan University (IRIS Lab) and visiting scholar at Carnegie Mellon University. Research on machine unlearning for generative speech models.">
+<link rel="canonical" href="https://gmint0125.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jimin Kim (김지민)">
+<meta property="og:description" content="Machine unlearning in generative models · Sungkyunkwan University · Carnegie Mellon University">
+<meta property="og:url" content="https://gmint0125.github.io/">
+<link rel="preload" href="assets/fonts/source-serif-4-normal-673d4d.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jimin Kim",
+  "alternateName": ["김지민", "Kim Jimin"],
+  "url": "https://gmint0125.github.io/",
+  "jobTitle": "M.S. student in Artificial Intelligence",
+  "description": "Researcher working on machine unlearning for generative speech models.",
+  "affiliation": [
+    {"@type": "CollegeOrUniversity", "name": "Sungkyunkwan University"},
+    {"@type": "CollegeOrUniversity", "name": "Carnegie Mellon University"}
+  ],
+  "sameAs": [
+    "https://github.com/GMINT0125",
+    "https://www.linkedin.com/in/jimin-kim-718530304/"
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+
+  <nav class="nav" aria-label="Primary">
+    <a class="brand" href="./">Jimin Kim</a>
+    <ul>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+  <header class="hero">
+    <div>
+      <h1>Jimin Kim<span class="ko" lang="ko">(김지민)</span></h1>
+      <p class="hlinks">
+        <a href="mailto:gmint1342@g.skku.edu">Email</a><span class="sep">·</span><a href="https://github.com/GMINT0125">GitHub</a><span class="sep">·</span><a href="https://www.linkedin.com/in/jimin-kim-718530304/">LinkedIn</a>
+      </p>
+      <p class="affil">
+        <span>M.S. student in Artificial Intelligence, Sungkyunkwan University</span>
+        <span>Visiting scholar, Carnegie Mellon University</span>
+        <span>IRIS Lab, advised by Jong Hwan Ko</span>
+      </p>
+      <p class="email mono"><a href="mailto:gmint1342@g.skku.edu">gmint1342@g.skku.edu</a></p>
+      <p class="loc" data-until="2027-02-28">Pittsburgh, PA · through Feb 2027</p>
+    </div>
+    <!-- PHOTO: replace this div with
+         <img class="photo" src="assets/portrait.jpg" width="232" height="232" alt="Portrait of Jimin Kim"> -->
+    <div class="photo" role="img" aria-label="Portrait placeholder">Photo</div>
+  </header>
+
+  <div class="bio">
+    <p>A zero-shot TTS model can copy a voice from three seconds of audio, which means it carries something of every speaker it was trained on. I work on taking one of those speakers back out — and on the harder question underneath it: whether the information is gone, or only out of reach.</p>
+    <p>That question is not specific to speech. The same structure shows up as memorization in language models, and that is where I want to take it next.</p>
+  </div>
+
+  <section id="publications">
+    <h2 class="label">Publications</h2>
+    <div class="rows">
+      <!-- PAPER TEMPLATE — copy a whole <article>, newest first.
+           data-status: under-review | preprint | accepted | published
+           While under-review: the status line says only "Under review". Never name the venue. -->
+      <article class="row" data-status="under-review">
+        <div>
+          <h3 class="rtitle">ESIAN: Training-Free Continual Speaker Identity Unlearning for Zero-Shot TTS</h3>
+          <p class="authors"><span class="me">Jimin Kim</span>, Tae-Young Lee, Jinju Kim, Gyeong-Moon Park, Jong Hwan Ko</p>
+          <p class="status">Under review</p>
+          <p class="gloss">Removes a speaker from a zero-shot TTS model in closed form — no retraining — so repeated removal requests compose exactly instead of degrading the model.</p>
+        </div>
+        <div class="meta mono">2026</div>
+      </article>
+
+      <article class="row" data-status="published">
+        <div>
+          <h3 class="rtitle">Industrial Anomaly Image Synthesis Using Residual Features from Reconstruction-Based Anomaly Detection</h3>
+          <p class="authors"><span class="me">Jimin Kim</span>, Jong Hwan Ko</p>
+          <p class="status">IEIE Summer Annual Conference · domestic conference, Korea</p>
+          <p class="gloss">Uses the reconstruction residuals of a normal-only anomaly detector as spatial guidance for where a synthetic defect should appear.</p>
+        </div>
+        <div class="meta mono">2026</div>
+      </article>
+
+      <article class="row" data-status="published">
+        <div>
+          <h3 class="rtitle">Continuous Memory Feature Fusion for Realistic Anomaly Image Synthesis</h3>
+          <p class="authors"><span class="me">Jimin Kim</span>, Ji Seok Kim, Jong Hwan Ko</p>
+          <p class="status">IEIE Conference on Electronics, Semiconductors and AI · poster · domestic conference, Korea</p>
+          <p class="gloss">Fuses continuous memory representations of normal and anomalous features and decodes them into synthetic defect images.</p>
+        </div>
+        <div class="meta mono">2025</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2 class="label">Research</h2>
+    <div class="threads">
+      <p class="thread"><b>Unlearning in generative models</b><span>Removing a concept, a speaker, or an identity from a trained generator without retraining it, and without degrading what stays.</span></p>
+      <p class="thread"><b>Memorization and privacy in speech</b><span>What a speech model retains about the people in its training data, and what that retention makes possible.</span></p>
+      <p class="thread"><b>Verification</b><span>How you prove a model forgot — the part the field currently takes on faith.</span></p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="label">Projects</h2>
+    <div class="rows">
+      <article class="row">
+        <div>
+          <h3 class="rtitle">Feature-level image synthesis for industrial anomaly detection</h3>
+          <p class="status">Industry project with SEMES · IRIS Lab, Sungkyunkwan University</p>
+          <p class="desc">Semiconductor inspection has almost no defect images to train on. I built a framework that synthesizes them at the feature level — fusing continuous memory representations of normal and anomalous features, then guiding defect placement with a detector's reconstruction residuals — and studied training under severe class imbalance. Evaluated on MVTec AD.</p>
+          <p class="rlinks"><a href="https://github.com/GMINT0125/CRAD">Code</a><span class="sep">·</span>built on CRAD (ECCV 2024)</p>
+        </div>
+        <div class="meta mono">Sep 2024 – Feb 2026</div>
+      </article>
+
+      <article class="row">
+        <div>
+          <h3 class="rtitle">Audio signal processing and spoofed-speech detection</h3>
+          <p class="status">Industry–academia project with Samsung Research · IRIS Lab, Sungkyunkwan University</p>
+          <p class="desc">Studied direction-of-arrival estimation for multi-channel audio, and trained AASIST-based detectors of synthetic speech on ASVspoof 5 and ASVspoof 2019, measuring how far they generalize to deepfake and TTS systems never seen in training.</p>
+          <p class="rlinks"><a href="https://github.com/GMINT0125/SR_Audio">Code</a></p>
+        </div>
+        <div class="meta mono">2025</div>
+      </article>
+    </div>
+  </section>
+
+  <section id="positions">
+    <h2 class="label">Education &amp; Positions</h2>
+    <div class="rows">
+      <div class="row slim"><div>Visiting scholar, Carnegie Mellon University<small>Software and Societal Systems Department · Korea IITP Global AI Talent Program</small></div><div class="meta mono">Aug 2026 – Feb 2027</div></div>
+      <div class="row slim"><div>M.S. in Artificial Intelligence, Sungkyunkwan University<small>IRIS Lab, advised by Jong Hwan Ko</small></div><div class="meta mono">Mar 2026 –</div></div>
+      <div class="row slim"><div>Research intern, IRIS Lab, Sungkyunkwan University</div><div class="meta mono">Sep 2024 – Feb 2026</div></div>
+      <div class="row slim"><div>B.S. in Applied Artificial Intelligence, Sungkyunkwan University</div><div class="meta mono">Mar 2020 – Feb 2026</div></div>
+      <div class="row slim"><div>Republic of Korea Air Force<small>15th Special Missions Wing</small></div><div class="meta mono">May 2022 – Feb 2024</div></div>
+    </div>
+  </section>
+  </main>
+
+  <footer>Last updated: September 2026 &nbsp;·&nbsp; Set in Source Serif 4 and Public Sans.</footer>
+</div>
+</body>
+</html>

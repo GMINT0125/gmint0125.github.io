@@ -1,0 +1,57 @@
+/* Self-hosted subsets of Source Serif 4, Public Sans, IBM Plex Mono, Noto Serif KR (all SIL OFL 1.1). */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-d77319.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/ibm-plex-mono-normal-8d0aea.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Noto Serif KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/noto-serif-kr-normal-aa9a37.woff2) format('woff2');
+  unicode-range: U+26, U+2b, U+3e, U+40, U+7e, U+ac01, U+ac19, U+ac1d, U+aca0, U+aca9, U+acb0, U+ad8c, U+ae09, U+ae38, U+ae40, U+aed8, U+b09c, U+b0a0, U+b108, U+b204, U+b298, U+b2d8, U+b2eb-b2ec, U+b2f4, U+b313, U+b358, U+b450, U+b4e0, U+b54c, U+b610, U+b780, U+b78c, U+b791, U+b8e8, U+b958, U+b974, U+b984, U+b9b0, U+b9bc-b9bd, U+b9ce, U+ba70, U+bbfc, U+bc0f, U+bc15, U+bc1b, U+bc31, U+bc95, U+bcc0, U+bcc4, U+bd81, U+bd88, U+c0c8, U+c11d, U+c13c, U+c158, U+c18d, U+c1a1, U+c21c, U+c4f0, U+c54a, U+c560, U+c5b8, U+c5c8, U+c5f4, U+c628, U+c62c, U+c678, U+c6cc, U+c808, U+c810, U+c885, U+c88b, U+c900, U+c988, U+c99d, U+c9c8, U+cc3d-cc3e, U+cc45, U+cd08, U+ce20, U+cee4, U+d074, U+d0a4, U+d0dd, U+d2b9, U+d3b8, U+d3c9, U+d488, U+d544, U+d559, U+d56d, U+d588, U+d615, U+d648, U+d655, U+d658, U+d65c;
+}
+@font-face {
+  font-family: 'Noto Serif KR';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/noto-serif-kr-normal-f03f57.woff2) format('woff2');
+  unicode-range: U+20-22, U+27-2a, U+2c-38, U+3a-3b, U+3f, U+41-47, U+4a-4c, U+4f-5d, U+61-7b, U+7d, U+a1, U+ab, U+ae, U+b7, U+bb, U+bf, U+2013-2014, U+201c-201d, U+2122, U+ac00, U+ace0, U+ae30, U+b2e4, U+b85c, U+b9ac, U+c0ac, U+c2a4, U+c2dc, U+c774, U+c778, U+c9c0, U+d558;
+}
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(fonts/public-sans-normal-f63147.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url(fonts/source-serif-4-italic-aeb8d9.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(fonts/source-serif-4-normal-673d4d.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

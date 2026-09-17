@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gmint0125.github.io/sitemap.xml

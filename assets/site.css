@@ -1,0 +1,113 @@
+/* Jimin Kim — personal site. Tokens and rationale live in /DESIGN.md. */
+:root{
+  --canvas:#fbfaf7; --ink:#16150f; --body:#35322a; --muted:#6b665a;
+  --rule:#ddd8cc; --rule-strong:#8f8878; --accent:#8a3324; --surface:#f2efe9;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --ko:"Noto Serif KR","Source Serif 4","Apple SD Gothic Neo",serif;
+  --shell:760px; --pad:24px; --section:72px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --canvas:#14130f; --ink:#ece8dd; --body:#cbc5b6; --muted:#9b9484;
+    --rule:#2e2b24; --rule-strong:#6b6455; --accent:#d4795e; --surface:#1e1c18;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--canvas);color:var(--body);
+  font-family:var(--serif);font-optical-sizing:auto;font-size:18px;line-height:1.65;
+  -webkit-font-smoothing:antialiased}
+.shell{max-width:calc(var(--shell) + 2*var(--pad));margin:0 auto;padding:0 var(--pad) 96px}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.skip{position:absolute;left:-999px;top:8px;background:var(--canvas);color:var(--ink);
+  padding:8px 12px;border:1px solid var(--rule-strong);border-radius:6px;font-family:var(--sans);font-size:14px}
+.skip:focus{left:8px;z-index:10}
+
+/* links: ink text, hairline underline; accent only on hover/focus */
+a{color:inherit;text-decoration:none;
+  background:linear-gradient(var(--rule-strong),var(--rule-strong)) 0 100%/100% 1px no-repeat;padding-bottom:1px}
+a:hover{color:var(--accent);background-image:linear-gradient(var(--accent),var(--accent))}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* top nav */
+.nav{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:36px 0 0}
+.nav .brand{white-space:nowrap;font-size:21px;font-weight:500;color:var(--ink);letter-spacing:-.005em;background:none;padding:0}
+.nav ul{display:flex;flex-wrap:wrap;gap:26px;list-style:none;margin:0;padding:0;
+  font-family:var(--sans);font-size:15.5px;color:var(--muted)}
+.nav ul a{background:none;padding:0}
+.nav ul a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 232px;gap:56px;align-items:start;padding:72px 0 8px}
+h1{font-size:56px;font-weight:500;line-height:1.02;letter-spacing:-.02em;color:var(--ink);margin:0 0 18px}
+h1 .ko{font-family:var(--ko);font-size:25px;font-weight:400;color:var(--body);
+  margin-left:.45em;letter-spacing:0;white-space:nowrap}
+.hlinks{font-family:var(--sans);font-size:14.5px;font-weight:500;color:var(--muted);margin:0 0 26px}
+.hlinks .sep{margin:0 9px;color:var(--rule-strong)}
+.affil{font-family:var(--sans);font-size:17px;line-height:1.7;color:var(--ink);margin:0 0 20px}
+.affil span{display:block}
+.email{font-size:14.5px;color:var(--ink);margin:0 0 2px}
+.email a{background:none;padding:0}
+.loc{font-family:var(--sans);font-size:15px;color:var(--muted);margin:0}
+.photo{width:232px;height:232px;border-radius:14px;background:var(--surface);
+  border:1px solid var(--rule);object-fit:cover;display:block}
+div.photo{display:flex;align-items:center;justify-content:center;
+  font-family:var(--sans);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+.bio{padding:44px 0 0}
+.bio p{margin:0 0 16px}
+
+/* sections: quiet label above content, single column */
+section{padding-top:var(--section)}
+h2.label{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 6px}
+
+/* rows: content left, date right, hairlines */
+.rows{border-top:1px solid var(--rule);margin-top:14px}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:32px;align-items:baseline;
+  padding:22px 0;border-bottom:1px solid var(--rule)}
+.row .meta{font-size:13px;color:var(--muted);white-space:nowrap;text-align:right}
+.rtitle{font-family:var(--serif);font-size:20px;font-weight:600;line-height:1.32;color:var(--ink);
+  margin:0 0 7px;text-wrap:balance}
+.authors{font-family:var(--sans);font-size:15px;color:var(--body);margin:0 0 3px}
+.authors .me{font-weight:700;color:var(--ink)}
+.status{font-family:var(--sans);font-size:14.5px;color:var(--muted);margin:0 0 10px}
+.gloss{font-size:16.5px;font-style:italic;line-height:1.55;color:var(--body);margin:0}
+.desc{font-size:16.5px;line-height:1.6;color:var(--body);margin:0}
+.rlinks{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--muted);margin:10px 0 0}
+.rlinks .sep{margin:0 8px;color:var(--rule-strong)}
+.row.slim{padding:15px 0;font-family:var(--sans);font-size:16px;color:var(--ink)}
+.row.slim small{display:block;font-size:14.5px;color:var(--muted);margin-top:1px}
+
+.threads{margin-top:20px;display:grid;gap:20px}
+.thread{margin:0}
+.thread b{font-family:var(--sans);font-size:15.5px;font-weight:600;color:var(--ink);display:block;margin-bottom:2px}
+.thread span{font-size:17px;line-height:1.6}
+
+footer{margin-top:88px;border-top:1px solid var(--rule);padding-top:20px;
+  font-family:var(--sans);font-size:13.5px;color:var(--muted);line-height:1.7}
+
+@media (max-width:760px){
+  body{font-size:17px}
+  .nav{padding-top:24px}.nav ul{gap:16px;font-size:14.5px}
+  .hero{grid-template-columns:1fr;gap:28px;padding-top:44px}
+  .photo{order:-1;width:120px;height:120px;border-radius:12px}
+  h1{font-size:42px}
+  :root{--section:56px}
+  .row{grid-template-columns:1fr;row-gap:4px}
+  .row .meta{text-align:left;order:-1}
+}
+/* phones: the h1 right below already says the name, so the nav keeps only the links */
+@media (max-width:520px){
+  .nav .brand{display:none}
+  .nav ul{gap:18px}
+}
+@media print{
+  .nav ul,.skip{display:none}
+  body{font-size:11pt;background:#fff;color:#000}
+  a{background:none}
+  section{padding-top:28pt}
+}
