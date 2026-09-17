@@ -82,10 +82,18 @@ h2.label{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.
 .row.slim{padding:15px 0;font-family:var(--sans);font-size:16px;color:var(--ink)}
 .row.slim small{display:block;font-size:14.5px;color:var(--muted);margin-top:1px}
 
-.threads{margin-top:20px;display:grid;gap:20px}
-.thread{margin:0}
-.thread b{font-family:var(--sans);font-size:15.5px;font-weight:600;color:var(--ink);display:block;margin-bottom:2px}
-.thread span{font-size:17px;line-height:1.6}
+/* timeline: a dot per entry joined by a line; filled dot = ongoing. Text sits 36px clear of the line. */
+.timeline{list-style:none;margin:24px 0 0;padding:0}
+.tl{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:32px;align-items:baseline;
+  padding:0 0 30px 36px;font-family:var(--sans);font-size:16px;color:var(--ink)}
+.tl:last-child{padding-bottom:0}
+.tl small{display:block;font-size:14.5px;color:var(--muted);margin-top:2px}
+.tl .meta{font-size:13px;color:var(--muted);white-space:nowrap;text-align:right}
+.tl::before{content:"";position:absolute;left:0;top:.45em;width:11px;height:11px;border-radius:50%;
+  background:var(--canvas);border:1.5px solid var(--rule-strong)}
+.tl.now::before{background:var(--ink);border-color:var(--ink)}
+.tl::after{content:"";position:absolute;left:5px;top:calc(.45em + 15px);bottom:calc(-.45em + 4px);width:1px;background:var(--rule-strong)}
+.tl:last-child::after{display:none}
 
 footer{margin-top:88px;border-top:1px solid var(--rule);padding-top:20px;
   font-family:var(--sans);font-size:13.5px;color:var(--muted);line-height:1.7}
@@ -97,8 +105,8 @@ footer{margin-top:88px;border-top:1px solid var(--rule);padding-top:20px;
   .photo{order:-1;width:120px;height:120px;border-radius:12px}
   h1{font-size:42px}
   :root{--section:56px}
-  .row{grid-template-columns:1fr;row-gap:4px}
-  .row .meta{text-align:left;order:-1}
+  .row,.tl{grid-template-columns:1fr;row-gap:4px}
+  .row .meta,.tl .meta{text-align:left;order:-1}
 }
 /* phones: the h1 right below already says the name, so the nav keeps only the links */
 @media (max-width:520px){

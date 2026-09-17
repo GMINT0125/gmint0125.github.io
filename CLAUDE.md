@@ -14,7 +14,7 @@ no framework, no JavaScript on the page. Read `DESIGN.md` before touching any ma
 - Fonts are self-hosted (`assets/fonts.css`). Never add a Google Fonts or other third-party request.
 - Per-paper pages and paper figures are published only after the advisor has agreed.
 - Composition is fixed: one column, label above content, rows with date at right. No left rail,
-  no vertical rule, no cards, no news feed.
+  no vertical rule beside prose, no cards, no news feed. (The education timeline's dot-and-line is the one exception.)
 
 ## Adding a paper
 Copy a whole `<article class="row" data-status="…">` block in `index.html`, paste it above the
@@ -24,7 +24,11 @@ footer's "Last updated" and `sitemap.xml` lastmod, and run `node tools/check.mjs
 
 ## Expiring strings
 Anything that stops being true on a known date carries `data-until="YYYY-MM-DD"`; the check
-fails once that date has passed. Currently: the Pittsburgh / "through Feb 2027" line.
+fails once that date has passed. Currently none.
+
+## Timeline
+Education & Experience is an `<ol class="timeline">`, newest first. Give an entry `class="tl now"` while it is
+ongoing (filled dot) and drop `now` when it ends — the CMU visit ends Feb 2027.
 
 ## Voice
 First person, plain, specific. No "passionate about", "cutting-edge", "leverage", "delve".

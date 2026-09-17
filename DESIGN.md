@@ -118,7 +118,8 @@ the **lists** follow leerob.com (content left, date right, hairline between rows
 - One column. Section labels sit above their content. Never a left rail, never a vertical rule.
 - Serif for anything read as a sentence; sans for anything read as metadata; mono only for dates and the email.
 - {colors.accent} is invisible at rest. It appears on hover and focus, nowhere else.
-- A row is: content left, date right, hairline below. Publications, projects and positions all use it.
+- A row is: content left, date right, hairline below. Publications and projects use it.
+- Education & experience is a timeline: one dot per entry joined by a 1px line, newest first. A filled dot means ongoing. Text sits 36px clear of the line — content must never touch it.
 - Nothing on the page may go stale silently: no news feed, no "currently", every date range closed where possible.
 
 ## Colors
@@ -170,11 +171,12 @@ None. No shadows anywhere. Depth is whitespace plus hairlines.
 
 ## Components
 
-- **Nav**: name left (serif 21px, links home), 3–4 text links right (sans, muted → ink on hover). No hamburger; links wrap on small screens.
+- **Nav**: name left (serif 21px, links home), three text links right — Publications · Projects · Education (sans, muted → ink on hover). No hamburger; links wrap on small screens.
 - **Link row**: `Email · GitHub · LinkedIn` (CV joins once a public-safe PDF exists), text only. A link that does not exist yet is omitted, never greyed out.
 - **Publication row**: title / authors / status line / one italic sentence; year at right. The title becomes a link only when the paper has its own page. Status line is either `Under review` (no venue, ever, while under review) or the venue name.
 - **Project row**: title / partner line / 2–3 sentence description / text links; date range at right.
-- **Position row**: one line plus an optional muted sub-line; date range at right.
+- **Timeline entry** (`.tl`, add `.now` while ongoing): one line plus an optional muted sub-line; date range at right in mono. 11px dot, {colors.rule-strong} outline on canvas, filled {colors.ink} when ongoing.
+- **Research-interest slot**: reserved between the hero and Publications (commented out in `index.html`) — serif prose, no label.
 - **Paper page** (`/<slug>/`, later): back link, title, authors, links, main figure with caption, then Problem / Method / Results / Limitations / BibTeX. Results may use a mono block with a 2px accent left rule — the only place the accent is static.
 
 ## Do's and Don'ts
