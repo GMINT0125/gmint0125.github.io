@@ -115,7 +115,7 @@ follows paco.me (a small quiet label *above* the content, one column, generous v
 the **lists** follow leerob.com (content left, date right, hairline between rows).
 
 **Key characteristics**
-- One column. Section labels sit above their content. Never a left rail, never a vertical rule.
+- One column. Section labels sit above their content, and every label carries the same 1px hairline beneath it, so all sections open identically. Never a left rail, never a vertical rule.
 - Serif for anything read as a sentence; sans for anything read as metadata; mono only for dates and the email.
 - {colors.accent} is invisible at rest. It appears on hover and focus, nowhere else.
 - A row is: content left, date right, hairline below. Publications and projects use it.
