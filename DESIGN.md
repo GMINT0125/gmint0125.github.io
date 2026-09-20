@@ -176,7 +176,7 @@ None. No shadows anywhere. Depth is whitespace plus hairlines.
 - **Publication row**: title / authors / status line / one italic sentence; year at right. The title becomes a link only when the paper has its own page. Status line is either `Under review` (no venue, ever, while under review) or the venue name.
 - **Project row**: title / partner line / 2–3 sentence description / text links; date range at right.
 - **Timeline entry** (`.tl`, add `.now` while ongoing): one line plus an optional muted sub-line; date range at right in mono. 11px dot, {colors.rule-strong} outline on canvas, filled {colors.ink} when ongoing.
-- **Research-interest slot**: reserved between the hero and Publications (commented out in `index.html`) — serif prose, no label.
+- **Research interests** (between the hero and Publications, not in the nav): a `<dl>` of keyword + one line. Keyword in sans 600 ink, the line in serif body. Two or three entries at most; each must be something the owner can talk about in depth.
 - **Paper page** (`/<slug>/`, later): back link, title, authors, links, main figure with caption, then Problem / Method / Results / Limitations / BibTeX. Results may use a mono block with a 2px accent left rule — the only place the accent is static.
 
 ## Do's and Don'ts

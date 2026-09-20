@@ -82,6 +82,11 @@ h2.label{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.
 .row.slim{padding:15px 0;font-family:var(--sans);font-size:16px;color:var(--ink)}
 .row.slim small{display:block;font-size:14.5px;color:var(--muted);margin-top:1px}
 
+/* research interests: keyword in sans, one line of serif under it */
+.interests{margin:18px 0 0;display:grid;gap:20px}
+.interests dt{font-family:var(--sans);font-size:15.5px;font-weight:600;color:var(--ink);margin:0 0 2px}
+.interests dd{margin:0;font-size:17px;line-height:1.6}
+
 /* timeline: a dot per entry joined by a line; filled dot = ongoing. Text sits 36px clear of the line. */
 .timeline{list-style:none;margin:24px 0 0;padding:0}
 .tl{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:32px;align-items:baseline;
