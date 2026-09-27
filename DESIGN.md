@@ -173,7 +173,7 @@ None. No shadows anywhere. Depth is whitespace plus hairlines.
 
 - **Nav**: name left (serif 21px, links home), three text links right — Publications · Projects · Education (sans, muted → ink on hover). No hamburger; links wrap on small screens.
 - **Link row**: `Email · GitHub · LinkedIn` (CV joins once a public-safe PDF exists), text only. A link that does not exist yet is omitted, never greyed out.
-- **Publication row**: title / authors / status line / one italic sentence; year at right. The title becomes a link only when the paper has its own page. Status line is either `Under review` (no venue, ever, while under review) or the venue name.
+- **Publication row**: title / authors / status line / one italic sentence; year at right. The title becomes a link only when the paper has its own page. Status line is `Under review`, `Under review at <venue>` (only for venues cleared in CLAUDE.md), or the venue name once accepted.
 - **Project row**: title / partner line / 2–3 sentence description / text links; date range at right.
 - **Timeline entry** (`.tl`, add `.now` while ongoing): one line plus an optional muted sub-line; date range at right in mono. 11px dot, {colors.rule-strong} outline on canvas, filled {colors.ink} when ongoing.
 - **Research interests** (between the hero and Publications, not in the nav): a `<dl>` of keyword + one line. Keyword in sans 600 ink, the line in serif body. Two or three entries at most; each must be something the owner can talk about in depth.
@@ -186,4 +186,4 @@ None. No shadows anywhere. Depth is whitespace plus hairlines.
 - Don't add cards, shadows, gradients, icons, badges, pills, thumbnails or a sidebar.
 - Don't use the accent for anything at rest.
 - Don't add a News section or anything that needs regular posting to look alive.
-- Don't name the venue of a paper that is under review, anywhere in the repo's published files.
+- Don't name the venue of an under-review paper unless that venue is cleared in CLAUDE.md.

@@ -4,11 +4,12 @@ Plain hand-written HTML + one CSS file, served by GitHub Pages from the repo roo
 no framework, no JavaScript on the page. Read `DESIGN.md` before touching any markup or CSS.
 
 ## Hard rules
-- **Never name the venue of a paper that is under review** — not in the entry, not in a meta tag,
-  not in alt text, a comment, a commit message or a PR title. The status line says only
-  `Under review`. Blind-review policies typically allow posting the work itself on a personal site
-  while forbidding the public copy from revealing where it was submitted, and breaking that can get
-  the paper summarily rejected. `tools/check.mjs` enforces this on every push.
+- **Name the venue of an under-review paper only if that venue's policy allows it.** Some venues
+  let authors post the work on a personal site but forbid the public copy from saying where it was
+  submitted, and breaking that can get the paper summarily rejected. So: read the venue's author
+  guidelines first, then add it to `NAMING_ALLOWED` in `tools/check.mjs`. Anything not on that list
+  must say only `Under review` — in the entry, meta tags, alt text, comments, commit messages.
+  Cleared so far: ICLR 2027 (guidelines allow preprints and say nothing against naming the venue).
 - There is no CV link yet. When a public `cv.pdf` is added it must follow the same rule and should not
   carry a phone number; then restore the CV link in the nav and the hero link row.
 - Fonts are self-hosted (`assets/fonts.css`). Never add a Google Fonts or other third-party request.

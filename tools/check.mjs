@@ -29,11 +29,15 @@ for (const s of statuses) if (!STATUSES.has(s)) errors.push(`unknown data-status
 // policies allow posting the work itself but forbid the public copy from revealing the
 // submission target, so we check the under-review entries against the usual acronyms.
 const VENUES = /\b(AAAI|NeurIPS|ICML|ICLR|COLM|ACL|EMNLP|NAACL|EACL|Interspeech|ICASSP|CVPR|ICCV|ECCV|WACV|BMVC|KDD|AISTATS|UAI|MLSys|SIGGRAPH)\b/i;
+// Venues whose own author guidelines were read and found to place no restriction on a public
+// page saying where the paper is under review. Add a venue here only after reading its policy.
+const NAMING_ALLOWED = new Set(['ICLR']); // ICLR 2027 Author Guidelines, read 2026-09-27
 const SUBMIT = /\b(submitted|submission|under submission)\b/i;
 for (const m of index.matchAll(/<article[^>]*data-status="under-review"[\s\S]*?<\/article>/g)) {
   const block = m[0];
-  const venue = block.match(VENUES);
-  if (venue) errors.push(`an under-review entry names a venue ("${venue[0]}") — it must say only "Under review"`);
+  const venue = [...block.matchAll(new RegExp(VENUES.source, 'gi'))]
+    .map(v => v[0]).find(v => !NAMING_ALLOWED.has(v.toUpperCase()));
+  if (venue) errors.push(`an under-review entry names a venue ("${venue}") whose policy has not been cleared — say only "Under review"`);
   const submit = block.match(SUBMIT);
   if (submit) errors.push(`an under-review entry says "${submit[0]}" — drop submission language`);
 }
